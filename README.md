@@ -1,133 +1,66 @@
-# Project 8: Customer Segmentation
+# Customer Segmentation — Telco Data
+
+An unsupervised-learning project that applies **K-Means clustering** to customer attributes from the IBM Telco Customer Churn dataset.
 
 ## Objective
 
-The objective of this project is to segment customers into meaningful groups using K-Means Clustering. Customer segmentation helps businesses understand customer behavior, identify similar customer groups, and develop targeted marketing strategies.
-
----
+Group customers with similar characteristics into segments that can be explored for differences in service usage, billing, and customer behavior.
 
 ## Dataset
 
-**Dataset:** IBM Telco Customer Churn Dataset
+| Attribute | Value |
+|---|---:|
+| Dataset | IBM Telco Customer Churn |
+| Records | 7,043 |
+| Learning Type | Unsupervised |
+| Selected Clusters | 4 |
 
-**Number of Records:** 7,043
+## Data Preparation
 
-The dataset contains customer demographic information, account details, subscribed services, and billing information.
+The workflow includes:
 
----
+- Converting `TotalCharges` to numeric
+- Handling missing values
+- Removing `customerID`
+- Encoding categorical variables
+- Standardizing features
 
-## Project Workflow
+## Method
 
-1. Import Libraries
-2. Load Dataset
-3. Data Cleaning
-4. Data Preprocessing
-5. Feature Scaling
-6. Determine Optimal Number of Clusters using the Elbow Method
-7. Apply K-Means Clustering
-8. Analyze Customer Segments
-9. Generate Business Insights
+1. Prepare customer features
+2. Scale the data
+3. Apply the Elbow Method
+4. Train K-Means
+5. Assign customers to clusters
+6. Analyze the resulting segments
 
----
+## Result
 
-## Machine Learning Technique
+The project selected **4 clusters** and grouped customers based on similarities across the prepared feature space.
 
-* Unsupervised Learning
-* K-Means Clustering
+## Skills Demonstrated
 
----
+- Unsupervised learning
+- K-Means
+- Feature preprocessing
+- Feature scaling
+- Elbow Method
+- Customer segmentation
+- Business interpretation
 
-## Data Preprocessing
+## Limitations
 
-The following preprocessing steps were performed:
-
-* Replaced blank values with missing values
-* Converted `TotalCharges` to numeric format
-* Filled missing values using the median
-* Removed `customerID`
-* Encoded categorical variables
-* Standardized features using `StandardScaler`
-
----
-
-## Results
-
-* Applied the Elbow Method to determine the optimal number of clusters.
-* Selected **4 clusters** for customer segmentation.
-* Successfully grouped customers based on similar characteristics.
-
----
-
-## Business Insights
-
-The customer segmentation process identified four different customer groups.
-
-These segments can help businesses:
-
-* Design targeted marketing campaigns
-* Improve customer engagement
-* Personalize promotional offers
-* Increase customer retention
-* Support business decision making
-
----
-
-## Skills Learned
-
-* Unsupervised Learning
-* Customer Segmentation
-* K-Means Clustering
-* Elbow Method
-* Feature Scaling
-* Data Preprocessing
-* Business Interpretation
-
----
-
-## Project Structure
-
-```
-08-Customer-Segmentation/
-│
-├── data/
-├── images/
-├── notebooks/
-├── outputs/
-├── reports/
-├── README.md
-├── LICENSE
-├── requirements.txt
-└── .gitignore
-```
-
----
-
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Jupyter Notebook
-
----
+Cluster assignments are exploratory rather than ground-truth labels. Their value depends on whether the groups are stable, interpretable, and actionable in a real business setting.
 
 ## Future Improvements
 
-* Experiment with DBSCAN clustering
-* Experiment with Hierarchical Clustering
-* Visualize customer clusters using PCA
-* Compare different clustering algorithms
-* Build customer personas for each segment
+- Evaluate silhouette score and cluster stability
+- Compare DBSCAN and hierarchical clustering
+- Use PCA / UMAP for visualization
+- Profile each cluster in more detail
+- Develop clearer customer personas
 
 ---
 
-## Author
-
-**Manan Paliwal**
-
-AI & Machine Learning Student
-
-Birla Institute of Technology, Mesra
+**Author:** Manan Paliwal  
+B.Tech Computer Science Engineering — Artificial Intelligence & Machine Learning
